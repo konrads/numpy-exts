@@ -5,6 +5,7 @@ In pandas, sometimes it's useful to apply a stateful vectorized function. Exampl
 
 In this project, I compare implementations of pure Python, Cython, Rust-numpy (pyo3).
 
+Build status (main): [![Build Status](https://travis-ci.org/konrads/numpy-exts.svg?branch=main)](https://travis-ci.org/konrads/numpy-exts)
 
 To setup
 --------
