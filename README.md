@@ -1,5 +1,5 @@
-Python, Cython, Rust extension for pandas' vectorized apply function
-====================================================================
+Python, Cython, Rust extension for pandas vectorized apply()
+============================================================
 
 In pandas, sometimes it's useful to apply a stateful vectorized function.
 
