@@ -1,0 +1,18 @@
+[package]
+name = "rust-trade-fsm"
+version = "0.1.0"
+authors = ["KS <k.s@gmail.com>"]
+edition = "2018"
+
+[lib]
+name = "rust_trade_fsm"
+crate-type = ["cdylib"]
+path = "npexts/lib.rs"
+
+[dependencies]
+numpy = "0.13"
+ndarray = "0.14"
+
+[dependencies.pyo3]
+version = "0.13"
+features = ["extension-module"]
