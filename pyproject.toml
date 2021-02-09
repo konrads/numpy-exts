@@ -1,16 +1,16 @@
 [build-system]
-build-backend = "maturin"
+# build-backend = "maturin"
 requires = ["setuptools", "wheel", "setuptools-rust"]
 
-[tool.poetry]
-name = "rust-trade_fsm"
-version = "0.1.0"
-description = "Rust based numpy apply function (trade FSM)"
-authors = ["KS <k.s@gmail.com>"]
-
-[tool.poetry.dependencies]
-numpy = ">=1.18"
-python = ">=3.6"
-
-[tool.poetry.dev-dependencies]
-pytest = "^6.1"
+#[tool.poetry]
+#name = "rust-trade_fsm"
+#version = "0.1.0"
+#description = "Rust based numpy apply function (trade FSM)"
+#authors = ["KS <k.s@gmail.com>"]
+#
+#[tool.poetry.dependencies]
+#numpy = ">=1.18"
+#python = ">=3.6"
+#
+#[tool.poetry.dev-dependencies]
+#pytest = "^6.1"

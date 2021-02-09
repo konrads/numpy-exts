@@ -37,7 +37,7 @@ impl RustTradeFSM {
       (res, "exit_short")
     }
     else {
-      (0., "na")
+      (0., "noop")
     }
   }
 }

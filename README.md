@@ -11,35 +11,30 @@ To setup
 ```bash
 mkvirtualenv numpy-exts
 pip install -r requirements.txt
-pip install -e .
-poetry install
-poetry run maturin develop
+python ./setup.py develop
+# NOTE, following doesn't seem to work for required extensions: pip install -e .
 ```
 
-
-
-
-# rust-numpy example extension
-
-Here, we use [`maturin`][maturin] for building Python wheel and
-[`poetry`][poetry] for managing Python dependencies and virtualenvs.
-Following commands creates a virtualenv, install Python-side
-dependencies, and install the extension to the virtualenv.
-
+To run comparisons
+------------------
 ```bash
-poetry install
-poetry run maturin develop
+pytest -s  # for verbose, to see exec times
+```
+ 
+Expected output:
+```
+tests/test_npexts.py .
+py trade = [10. 10.  0. ... 10.  0.  0.]
+   state = ['enter_long' 'exit_long' 'noop' ... 'enter_long' 'noop' 'noop']
+   avg_exec_time = 0.09
+.
+c trade = [10. 10.  0. ... 10.  0.  0.]
+  state = ['enter_long' 'exit_long' 'noop' ... 'enter_long' 'noop' 'noop']
+  avg_exec_time = 0.08
+.
+rust trade = [10. 10.  0. ... 10.  0.  0.]
+     state = ['enter_long' 'exit_long' 'noop' ... 'enter_long' 'noop' 'noop']
+     avg_exec_time = 0.73
 ```
 
-Once the extension installed, you can run the extension from
-Python REPL started by `poetry run python`:
-
-```python
->>> import numpy as np
->>> import rust_ext
->>> rust_ext.axpy(2.0, np.array([0.0, 1.0]), np.array([2.0, 3.0]))
-array([2., 5.])
-```
-
-[maturin]: https://github.com/PyO3/maturin
-[poetry]: https://python-poetry.org/
+Which suggests Cython is tiny bit faster than pure Python, yet Rust is 9x slower!

@@ -31,7 +31,7 @@ class PyTradeFSM:
       self.short_pos = 0.
       return res, 'exit_short'
     else:
-      return 0., 'na'
+      return 0., 'noop'
 
   def trade(self, df):
     self.long_pos = 0.
