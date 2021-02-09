@@ -4,3 +4,8 @@ install:
   - python setup.py develop
 script:
   - pytest -s
+before_script:
+  - apt-get update
+  - apt-get install curl software-properties-common -y
+  - add-apt-repository ppa:jonathonf/rustlang -y
+  - apt-get install rustc -y
