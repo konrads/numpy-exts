@@ -1,9 +1,9 @@
 Python, Cython, Rust extension for pandas vectorized apply()
 ============================================================
 
-In pandas, sometimes it's useful to apply a stateful vectorized function.
+In pandas, sometimes it's useful to apply a stateful vectorized function. Example of such is a trade simulator that chooses to enter/exit long/short position based on a pandas DF.
 
-In this project, I compare pure Python, Cython, Rust-numpy (pyo3).
+In this project, I compare implementations of pure Python, Cython, Rust-numpy (pyo3).
 
 
 To setup
@@ -37,4 +37,4 @@ rust trade = [10. 10.  0. ... 10.  0.  0.]
      avg_exec_time = 0.73
 ```
 
-Which suggests Cython is tiny bit faster than pure Python, yet Rust is 9x slower!
+This suggests Cython is slightly faster pure Python, but Rust is ~10x slower!  Surprising, needs an investigation... 
