@@ -1,1 +1,2 @@
-**/*.py linguist-detectable=false
+npexts/*.py linguist-detectable=false
+tests/*.py linguist-detectable=false
