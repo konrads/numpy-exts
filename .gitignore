@@ -6,4 +6,5 @@ __pycache__
 c_trade_fsm.c
 *.egg-info
 target
+dist
 
