@@ -12,7 +12,4 @@ path = "npexts/lib.rs"
 [dependencies]
 numpy = "0.13"
 ndarray = "0.14"
-
-[dependencies.pyo3]
-version = "0.13"
-features = ["extension-module"]
+pyo3 = { version = "0.13", features = ["extension-module"] }
