@@ -43,7 +43,7 @@ rust trade = [10. 10.  0. ... 10.  0.  0.]
 
 ```
 
-With debug build, 6-7 times slower in debug build (created via `python ./setup.py develop`):
+With debug build, 6-7 times slower (created via `python ./setup.py develop`):
 ```
 tests/test_npexts.py .
 py trade = [10. 10.  0. ... 10.  0.  0.]
